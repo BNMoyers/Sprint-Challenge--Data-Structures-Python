@@ -1,5 +1,7 @@
 from doubly_linked_list import DoublyLinkedList
+# RingBuffer has two methods, `append` and `get`. The `append` method adds elements to the buffer. The `get` method, which is provided, returns all of the elements in the buffer in a list in their given order. It should not return any `None` values in the list even if they are present in the ring buffer.
 
+# _You may not use a Python List in your implementation of the `append` method (except for the stretch goal)_
 
 class RingBuffer:
     def __init__(self, capacity):

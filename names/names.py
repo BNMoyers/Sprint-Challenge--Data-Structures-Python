@@ -1,5 +1,9 @@
 import time
+# Can you get the runtime to under a second? Under one hundredth of a second?
 
+#*You may not use the built in Python list, set, or dictionary in your solution for this problem.  However, you can and should use the provided `duplicates` list to return your solution.*
+
+#(Hint: You might try importing a data structure you built during the week)
 start_time = time.time()
 
 f = open('names_1.txt', 'r')

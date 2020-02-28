@@ -1,3 +1,5 @@
+# _Without_ making it a Doubly Linked List (adding a tail attribute), complete the `reverse_list()` function within `reverse/reverse.py` reverse the contents of the list. 
+
 class Node:
   def __init__(self, value=None, next_node=None):
     # the value at this linked list node
