@@ -1,9 +1,13 @@
 import time
+from binary_search_tree import BinarySearchTree
 # Can you get the runtime to under a second? Under one hundredth of a second?
 
 #*You may not use the built in Python list, set, or dictionary in your solution for this problem.  However, you can and should use the provided `duplicates` list to return your solution.*
 
 #(Hint: You might try importing a data structure you built during the week)
+
+#Original solution runtime: 0(n^2)
+#New runtime: 0(nlogn)
 start_time = time.time()
 
 f = open('names_1.txt', 'r')
@@ -15,12 +19,15 @@ names_2 = f.read().split("\n")  # List containing 10000 names
 f.close()
 
 duplicates = []  # Return the list of duplicates in this data structure
-
+bst = BinarySearchTree('names')
 # Replace the nested for loops below with your improvements
-for name_1 in names_1:
-    for name_2 in names_2:
-        if name_1 == name_2:
-            duplicates.append(name_1)
+for name in names_1:
+    bst.insert(name)
+
+for name in names_2:
+    if bst.contains(name):
+        duplicates.append(name)
+
 
 end_time = time.time()
 print (f"{len(duplicates)} duplicates:\n\n{', '.join(duplicates)}\n\n")
